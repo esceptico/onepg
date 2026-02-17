@@ -1,4 +1,5 @@
 .git
+.github
 .env
 .claude
 .DS_Store
@@ -6,3 +7,4 @@ data/
 output/
 TODO.md
 *.pdf
+*.html

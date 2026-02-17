@@ -1,0 +1,9 @@
+{
+  "name": "onepg",
+  "description": "YAML resume builder with auto-fit PDF rendering",
+  "version": "1.0.0",
+  "author": { "name": "Timur Ganiev" },
+  "skills": "./skills/",
+  "repository": "https://github.com/esceptico/onepg",
+  "license": "MIT"
+}
