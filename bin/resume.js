@@ -4,7 +4,7 @@ const { program } = require('commander');
 const path = require('path');
 const fs = require('fs');
 
-program.name('onepg').description('YAML resume builder with auto-fit PDF rendering').version('1.0.0');
+program.name('onepg').description('YAML resume builder with auto-fit PDF rendering').version('1.0.1');
 
 program
   .command('build')
