@@ -1,6 +1,6 @@
 {
   "name": "onepg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "YAML resume builder with auto-fit PDF rendering",
   "bin": {
     "onepg": "bin/resume.js"
