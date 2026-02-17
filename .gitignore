@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+*.pdf
+output/
+TODO.md
+.env
+.claude/
+data/

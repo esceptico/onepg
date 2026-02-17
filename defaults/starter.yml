@@ -1,0 +1,57 @@
+personal:
+  name: Jane Smith
+  email: jane@example.com
+  github: janesmith
+  linkedin: janesmith
+  phone: "+1 555-123-4567"
+  location: San Francisco, CA
+
+summary: >-
+  Software engineer with 4 years of experience building web applications
+  and distributed systems. Focused on clean architecture and shipping
+  reliable software.
+
+experience:
+  - company: Acme Corp
+    roles:
+      - title: Senior Software Engineer
+        dates:
+          start: Mar 2022
+          end: Present
+        bullets:
+          - Designed and built a real-time data pipeline processing 50K events/sec, reducing alert latency from 5 min to under 10 sec.
+          - Migrated monolithic API to microservices architecture, cutting deploy time from 45 min to 8 min.
+          - Mentored 3 junior engineers through code reviews and pair programming sessions.
+      - title: Software Engineer
+        dates:
+          start: Jun 2020
+          end: Feb 2022
+        bullets:
+          - Built internal dashboard used by 200+ employees for monitoring service health and incident response.
+          - Reduced API response time by 40% through query optimization and caching layer improvements.
+
+projects:
+  - name: fastqueue
+    dates:
+      start: "2023"
+      end: Present
+    description: Lightweight in-memory job queue for Node.js
+    bullets:
+      - Built a zero-dependency job queue with priority scheduling, used in 3 production services.
+    links:
+      github: https://github.com/janesmith/fastqueue
+
+education:
+  - institution: UC Berkeley
+    degree: B.S. Computer Science
+    dates:
+      start: "2016"
+      end: "2020"
+
+skills:
+  - category: Languages
+    items: [TypeScript, Python, Go, SQL]
+  - category: Infrastructure
+    items: [AWS, Docker, Kubernetes, Terraform]
+  - category: Tools
+    items: [PostgreSQL, Redis, Kafka, Git]

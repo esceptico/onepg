@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ personal.name }} Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>{{ css }}</style>
+  </head>
+  <body>
+    <main class="resume">
+      <header class="resume__header">
+        <div class="resume__name">{{ personal.name }}</div>
+        <nav class="resume__contact">
+          <div class="contact-row">
+            {% if personal.email %}
+            <a class="contact-link" href="mailto:{{ personal.email }}">
+              <i class="fa-solid fa-envelope"></i>
+              {{ personal.email }}
+            </a>
+            {% endif %}
+            {% if personal.github %}
+            <a class="contact-link" href="https://{{ personal.github }}" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
+              {{ personal.github }}
+            </a>
+            {% endif %}
+          </div>
+          <div class="contact-row">
+            {% if personal.linkedin %}
+            <a class="contact-link" href="https://{{ personal.linkedin }}" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-linkedin"></i>
+              {{ personal.linkedin }}
+            </a>
+            {% endif %}
+            {% if personal.phone %}
+            <a class="contact-link" href="tel:{{ personal.phone }}">
+              <i class="fa-solid fa-phone"></i>
+              {{ personal.phone }}
+            </a>
+            {% endif %}
+            {% if personal.personal_site %}
+             <a class="contact-link" href="https://{{ personal.personal_site }}" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-globe"></i>
+              {{ personal.personal_site }}
+            </a>
+            {% endif %}
+          </div>
+        </nav>
+      </header>
+
+      <section class="section summary">
+        <h2>Summary</h2>
+        <div class="section__body">
+          <p>{{ summary }}</p>
+        </div>
+      </section>
+
+      <section class="section experience">
+        <h2>Experience</h2>
+        <div class="section__body">
+        {% for entry in experience %}
+        <article class="experience-entry">
+          {% for role in entry.roles %}
+          <div class="experience-role">
+            <div class="role-header">
+              <span class="role-company">{{ entry.company }}</span>
+              <span class="role-title">{{ role.title }}</span>
+              <span class="role-dates">{{ role.dates.start }} – {{ role.dates.end }}</span>
+            </div>
+            <ul>
+              {% for bullet in role.bullets %}
+              <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </article>
+        {% endfor %}
+        </div>
+      </section>
+
+      {% if projects and projects.length > 0 %}
+      <section class="section projects">
+        <h2>Projects</h2>
+        <div class="section__body">
+        {% for project in projects %}
+        <article class="project-entry">
+          <div class="project-role">
+            <div class="role-header">
+              {% if project.links and project.links.github %}
+              <a class="role-company project-name-link" href="https://{{ project.links.github }}" target="_blank" rel="noreferrer">{{ project.name }} <i class="fa-brands fa-github"></i></a>
+              {% elif project.links and project.links.website %}
+              <a class="role-company project-name-link" href="https://{{ project.links.website }}" target="_blank" rel="noreferrer">{{ project.name }} <i class="fa-solid fa-link"></i></a>
+              {% else %}
+              <span class="role-company">{{ project.name }}</span>
+              {% endif %}
+              <span class="role-title">{{ project.description }}</span>
+              <span class="role-dates">{{ project.dates.start }} – {{ project.dates.end }}</span>
+            </div>
+            <ul>
+              {% for bullet in project.bullets %}
+              <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article>
+        {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      <section class="section education">
+        <h2>Education</h2>
+        <div class="section__body">
+        {% for edu in education %}
+        <article class="education-entry">
+          <div class="education-role">
+            <div class="role-header">
+              <span class="role-company">{{ edu.institution }}</span>
+              <span class="role-title">{{ edu.degree }}</span>
+              <span class="role-dates">{{ edu.dates.start }} – {{ edu.dates.end }}</span>
+            </div>
+            {% if edu.bullets %}
+             {% for bullet in edu.bullets %}
+            <p class="education-detail">{{ bullet }}</p>
+             {% endfor %}
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+        </div>
+      </section>
+
+      <section class="section skills">
+        <h2>Skills</h2>
+        <div class="section__body">
+        <div class="skills-grid">
+          {% for skill in skills %}
+          <div class="skill-block">
+            <div class="skill-title">{{ skill.category }}</div>
+            <div class="skill-items">{{ skill.items | join(', ') }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
