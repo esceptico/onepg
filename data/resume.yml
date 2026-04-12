@@ -1,0 +1,154 @@
+personal:
+  name: "Timur Ganiev"
+  # location: "Yerevan, Armenia"
+  email: "ganiev.tmr@gmail.com"
+  github: "github.com/esceptico"
+  linkedin: "linkedin.com/in/esceptico"
+  phone: ""
+  personal_site: ""
+
+summary: >-
+  Research Engineer building agentic memory and context systems at Dex. Previously led post-training
+  and safety alignment at Replika -- managed 6-8 ML engineers, shipped DPO-trained models at scale,
+  and built memory systems for conversational AI. Interested in mechanistic interpretability and RL for LLMs.
+
+experience:
+  - company: "Dex"
+    roles:
+      - title: "Research Engineer"
+        dates:
+          start: "Apr 2026"
+          end: "Present"
+        bullets:
+          - "Building persistent memory and context layer for workspace agents -- ingesting Slack, email, calendar, and docs into a structured knowledge base with continuous learning from user feedback."
+          - "Designing retrieval and reasoning pipeline over operational history for multi-step agent workflows."
+  - company: "Adgentic"
+    roles:
+      - title: "Machine Learning Engineer"
+        dates:
+          start: "Mar 2026"
+          end: "Apr 2026"
+        bullets:
+          - "Built agent orchestration on LangGraph with supervisor pattern, message compaction, context isolation, and streaming tool execution."
+          - "Refactored agents module with typed config abstractions, Langfuse tracing, and VLM-based reference image analysis."
+  - company: "Replika"
+    roles:
+      - title: "Lead Machine Learning Engineer"
+        dates:
+          start: "Oct 2022"
+          end: "Dec 2025"
+        bullets:
+          - "Owned DPO preference alignment and safety alignment end-to-end: training pipeline on TRL/PEFT, safety classifier (93.8% F1) with hard negative mining, statistically significant gains (p<0.017) in production A/B tests."
+          - "Co-led conversation system redesign: two-tier memory (graph DB + vector store) with decay summaries, hybrid retrieval with cross-encoder reranking, context engineering and tool calling."
+          - "Distributed inference at 100+ RPS (Llama 3.1, Qwen); ~40% P95 latency reduction via parallel tool execution; led migration to self-hosted vLLM."
+          - "Managed 6-8 ML engineers; shipped 10+ production A/B experiments; coordinated cross-team work with Product, Backend, and DevOps."
+  - company: "Embedika"
+    roles:
+      - title: "Machine Learning Engineer"
+        dates:
+          start: "Feb 2022"
+          end: "Sep 2022"
+        bullets:
+          - "Built active learning service for multi-modal annotation and toxic content classifier achieving 94% F1-score."
+  - company: "Sber"
+    roles:
+      - title: "Machine Learning Engineer"
+        dates:
+          start: "Jan 2020"
+          end: "Feb 2022"
+        bullets:
+          - "Led team of 4 engineers across 3 projects from research to production; conducted hiring and sprint planning."
+          - "Built multi-target text classification (93% F1) on noisy multitask data; +4% F1 via Integrated Gradients analysis and adversarial augmentation."
+          - "Optimized inference by 80% through distillation, ONNX conversion, and INT8 quantization."
+projects:
+  - name: "ntrp"
+    description: "Personal agent with persistent memory for information management"
+    dates:
+      start: "2025"
+      end: "Present"
+    bullets:
+      - "Built semantic memory layer over personal data (Obsidian, Gmail, browser history) with background consolidation, IDF-weighted entity linking, and temporal clustering."
+      - "Agentic tool execution with multi-provider LLM backend supporting scheduled tasks, proactive actions, and natural language queries over scattered data."
+    links:
+      github: "github.com/esceptico/ntrp"
+  - name: "timganiev.com/log"
+    description: "Technical blog with annotated ML implementations"
+    dates:
+      start: "2025"
+      end: "Present"
+    bullets:
+      - "Annotated implementations of DPO, SAPO, activation steering, and group-based RL fine-tuning (GRPO/GSPO)."
+    links:
+      website: "timganiev.com/log"
+
+education:
+  - institution: "Kazan National Research Technical University"
+    degree: "B.S. in Computer Science"
+    dates:
+      start: "Sep 2014"
+      end: "Aug 2018"
+    bullets:
+      - "Thesis: Personality traits prediction based on Twitter account data."
+
+skills:
+  - category: "Post-Training & Alignment"
+    items:
+      - "RLHF"
+      - "DPO"
+      - "SFT"
+      - "preference modeling"
+      - "safety alignment"
+      - "adversarial evaluation"
+      - "red-teaming"
+      - "GRPO"
+  - category: "Mechanistic Interpretability"
+    items:
+      - "activation steering"
+      - "linear probing"
+      - "circuit analysis"
+      - "TransformerLens"
+  - category: "Inference & Systems"
+    items:
+      - "vLLM"
+      - "DeepSpeed"
+      - "FSDP"
+      - "quantization"
+      - "distillation"
+      - "distributed serving"
+      - "speculative decoding"
+      - "ONNX Runtime"
+  - category: "LLM Applications"
+    items:
+      - "agentic workflows"
+      - "memory & context engineering"
+      - "RAG"
+      - "tool use"
+      - "hybrid retrieval"
+      - "cross-encoder reranking"
+  - category: "Data & Vector Stores"
+    items:
+      - "Qdrant"
+      - "Neo4j"
+      - "ClickHouse"
+      - "Athena"
+  - category: "Frameworks & Tools"
+    items:
+      - "PyTorch"
+      - "Transformers"
+      - "TRL"
+      - "PEFT"
+      - "Weights & Biases"
+      - "PrimeRL"
+      - "Verifiers"
+  - category: "Infrastructure"
+    items:
+      - "Python"
+      - "FastAPI"
+      - "Docker"
+      - "Redis"
+      - "Linux"
+      - "CI/CD"
+      - "Kubernetes"
+      - "Ansible"
+      - "Datadog"
+      - "Amplitude"
